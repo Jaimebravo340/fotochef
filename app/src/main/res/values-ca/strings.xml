@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fotochef</string>
+    
+    <!-- Main Navigation -->
+    <string name="home">Inici</string>
+    <string name="recipes">Receptes</string>
+    <string name="shopping_list">Llista de Compra</string>
+    <string name="favorites">Favorits</string>
+    <string name="settings">Configuració</string>
+    
+    <!-- Settings Screen -->
+    <string name="dietary_preferences">Preferències Dietètiques</string>
+    <string name="vegan">Vegà</string>
+    <string name="gluten_free">Sense Gluten</string>
+    <string name="theme_settings">Configuració del Tema</string>
+    <string name="dark_mode">Mode Fosc</string>
+    <string name="language">Idioma</string>
+    <string name="help_privacy">Ajuda i Privacitat</string>
+    <string name="about">Sobre FotoChef</string>
+    <string name="privacy_policy">Política de Privacitat</string>
+    <string name="version">Versió</string>
+    
+    <!-- Dietary Filter Messages -->
+    <string name="no_recipes_matching_filters">No hi ha receptes que coincideixin amb les teves preferències dietètiques</string>
+    <string name="apply_dietary_filters">Aplicar Filtres Dietètics</string>
+    
+    <!-- Share Intent -->
+    <string name="share_recipe">Compartir Recepta</string>
+    <string name="share_text">Mira aquesta recepta de FotoChef: %s</string>
+    
+    <!-- Language Selection -->
+    <string name="spanish">Espanyol</string>
+    <string name="catalan">Català</string>
+    <string name="language_changed">Idioma canviat. Si us plau, reinicia l\'aplicació.</string>
+    
+    <!-- Help & Privacy -->
+    <string name="help_title">Ajuda</string>
+    <string name="privacy_title">Política de Privacitat</string>
+    <string name="help_content">Benvingut a FotoChef!\n\nFotoChef utilitza la càmera del teu dispositiu i IA per detectar ingredients en fotos i suggerir receptes.\n\nCaracterístiques:\n- Escaneja ingredients amb la teva càmera\n- Troba receptes amb ingredients disponibles\n- Filtra per preferències dietètiques\n- Guarda les teves receptes favorites\n- Gestiona la teva llista de compra</string>
+    <string name="privacy_content">Política de Privacitat\n\nFotoChef respecta la teva privacitat. Tot el processament d\'imatges ocorre en el teu dispositiu usant ML Kit. Les imatges no es envien a servidors externs.\n\nEmmagatzematge de Dades:\n- Les receptes s\'emmagatzemen localment en el teu dispositiu\n- Les teves preferències dietètiques es guarden de forma segura\n- Pots eliminar tots els dades des de configuració\n\nPermisos:\n- Càmera: Per capturar fotos d\'ingredients\n- Almacenamiento: Per guardar imatges de receptes</string>
+</resources>

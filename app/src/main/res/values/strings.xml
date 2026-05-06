@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Fotochef</string>
+    
+    <!-- Main Navigation -->
+    <string name="home">Home</string>
+    <string name="recipes">Recetas</string>
+    <string name="shopping_list">Lista de la Compra</string>
+    <string name="favorites">Favoritos</string>
+    <string name="settings">Ajustes</string>
+    
+    <!-- Settings Screen -->
+    <string name="dietary_preferences">Preferencias Dietéticas</string>
+    <string name="vegan">Vegano</string>
+    <string name="gluten_free">Sin Gluten</string>
+    <string name="theme_settings">Ajustes de Tema</string>
+    <string name="dark_mode">Modo Oscuro</string>
+    <string name="language">Idioma</string>
+    <string name="help_privacy">Ayuda y Privacidad</string>
+    <string name="about">Sobre FotoChef</string>
+    <string name="privacy_policy">Política de Privacidad</string>
+    <string name="version">Versión</string>
+    
+    <!-- Dietary Filter Messages -->
+    <string name="no_recipes_matching_filters">No hay recetas que coincidan con tus preferencias</string>
+    <string name="apply_dietary_filters">Aplicar Filtros</string>
+    
+    <!-- Share Intent -->
+    <string name="share_recipe">Compartir Receta</string>
+    <string name="share_text">Mira esta receta de FotoChef: %s</string>
+    
+    <!-- Language Selection -->
+    <string name="spanish">Español</string>
+    <string name="catalan">Catalán</string>
+    <string name="language_changed">Idioma cambiado. Por favor reinicia la app.</string>
+    
+    <!-- Help & Privacy -->
+    <string name="help_title">Ayuda</string>
+    <string name="privacy_title">Política de Privacidad</string>
+    <string name="help_content">¡Bienvenido a FotoChef!\n\nFotoChef usa la cámara de tu dispositivo e IA para detectar ingredientes en fotos y sugerir recetas.\n\nCaracterísticas:\n- Escanea ingredientes con tu cámara\n- Encuentra recetas con los ingredientes disponibles\n- Filtra por preferencias dietéticas\n- Guarda tus recetas favoritas\n- Gestiona tu lista de la compra</string>
+    <string name="privacy_content">Política de Privacidad\n\nFotoChef respeta tu privacidad. Todo el procesamiento de imágenes ocurre en tu dispositivo. No se envían imágenes a servidores externos.\n\nAlmacenamiento de Datos:\n- Las recetas se guardan localmente\n- Tus preferencias se guardan de forma segura\n- Puedes borrar todos los datos desde ajustes\n\nPermisos:\n- Cámara: Para capturar fotos de ingredientes\n- Almacenamiento: Para guardar imágenes de recetas</string>
+
+    <!-- Home Screen -->
+    <string name="welcome_user">¡Hola, %s!</string>
+    <string name="what_to_cook">¿Qué vamos a cocinar hoy?</string>
+    <string name="daily_suggestion">Sugerencia del día</string>
+    <string name="quick_actions">Acciones rápidas</string>
+    <string name="scan_action">Escanear</string>
+    <string name="recipes_action">Recetas</string>
+    <string name="shopping_action">Compra</string>
+    <string name="favorites_action">Favoritos</string>
+    <string name="your_favorites">Tus favoritos</string>
+
+    <!-- Detection Screen -->
+    <string name="scanning">Escaneando...</string>
+    <string name="identifying_ia">Identificando ingredientes con IA</string>
+    <string name="missing_ingredient">¿Falta algún ingrediente?</string>
+    <string name="ingredient_placeholder">Ej: Tomate, Cebolla...</string>
+    <string name="detected_ingredients">Ingredientes detectados</string>
+    <string name="view_recipes">Ver recetas disponibles</string>
+    <string name="analyzing_photo">Analizando foto...</string>
+    <string name="wait_moment">Esto tardará solo un momento</string>
+    <string name="precise_detection">¡Detección precisa!</string>
+    <string name="unclear_detection">Detección poco clara</string>
+    <string name="ia_confident">IA confía en los resultados</string>
+    <string name="review_ingredients">Revisa los ingredientes detectados</string>
+    <string name="no_ingredients_detected">No se detectaron ingredientes</string>
+    <string name="add_manually_hint">Intenta añadir algunos manualmente</string>
+
+    <!-- Empty States -->
+    <string name="empty_favorites_title">No hay favoritos aún</string>
+    <string name="empty_favorites_desc">Guarda las recetas que más te gusten para tenerlas a mano.</string>
+    <string name="empty_shopping_title">Tu lista está vacía</string>
+    <string name="empty_shopping_desc">Añade ingredientes desde las recetas para planificar tu compra.</string>
+    <string name="empty_recipes_title">No se encontraron recetas</string>
+    <string name="empty_recipes_desc">Prueba a escanear otros ingredientes o cambiar los filtros.</string>
+
+    <!-- Auth -->
+    <string name="login">Iniciar Sesión</string>
+    <string name="register">Registrarse</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+</resources>

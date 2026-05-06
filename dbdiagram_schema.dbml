@@ -1,0 +1,80 @@
+// =============================================
+// FotoChef - Esquema de Base de Datos (Room)
+// Para usar en https://dbdiagram.io/d
+// =============================================
+
+Table receptes {
+  id long [pk, increment, note: 'ID único auto-generado']
+  nom varchar [default: '', note: 'Nombre de la receta']
+  descripcio varchar [default: '', note: 'Descripción breve']
+  tempsPreparacio int [default: 0, note: 'Tiempo de preparación en minutos']
+  dificultat varchar [default: '', note: 'Fàcil / Mitjà / Difícil']
+  imatgePath varchar [default: '', note: 'Ruta o URL de la imagen']
+  esFavorita boolean [default: false, note: 'Marcada como favorita']
+  passos varchar [default: '[]', note: 'JSON Array con los pasos']
+  categoria varchar [default: '', note: 'Primer / Segon / Postres']
+  esVegana boolean [default: false, note: 'Apta para veganos']
+  esSenseGluten boolean [default: false, note: 'Sin gluten']
+  calories int [default: 0, note: 'Calorías por ración']
+  proteines float [default: 0, note: 'Proteínas (g)']
+  carbs float [default: 0, note: 'Carbohidratos (g)']
+  greixos float [default: 0, note: 'Grasas (g)']
+
+  Note: 'Recetas del catálogo. Los pasos se almacenan como JSON string.'
+}
+
+Table ingredients {
+  id long [pk, increment, note: 'ID único auto-generado']
+  nom varchar [not null, note: 'Nombre del ingrediente (ej: Tomate)']
+  categoria varchar [default: '', note: 'Verdura / Carne / Lácteo / Cereal / Condimento']
+  icona varchar [default: '', note: 'Emoji representativo (🍅, 🧅...)']
+  isInPantry boolean [default: false, note: 'Si está en la despensa virtual del usuario']
+
+  Note: 'Catálogo de ingredientes. Se asocian a recetas vía recepta_ingredient.'
+}
+
+Table recepta_ingredient {
+  receptaId long [not null, note: 'FK a receptes.id']
+  ingredientId long [not null, note: 'FK a ingredients.id']
+  quantitat varchar [default: '', note: 'Cantidad (200g, 2 unidades, al gusto)']
+
+  indexes {
+    (receptaId, ingredientId) [pk]
+    receptaId
+    ingredientId
+  }
+
+  Note: 'Tabla intermedia N:M entre recetas e ingredientes. CASCADE en ambas FK.'
+}
+
+Table ingredients_detectats {
+  id long [pk, increment, note: 'ID único auto-generado']
+  nom varchar [not null, note: 'Nombre del ingrediente detectado']
+  confianca float [not null, note: 'Score de confianza (0.0 a 1.0)']
+  imatgePath varchar [default: '', note: 'Ruta de la imagen fuente']
+  timestamp long [note: 'Momento de la detección (epoch ms)']
+  confirmat boolean [default: false, note: 'Validado manualmente por el usuario']
+
+  Note: 'Ingredientes detectados por ML Kit Image Labeling desde una foto.'
+}
+
+Table ingredients_compra {
+  id long [pk, increment, note: 'ID único auto-generado']
+  nom varchar [default: '', note: 'Nombre del ingrediente a comprar']
+  quantitat varchar [default: '', note: 'Cantidad necesaria (500, 2)']
+  unitat varchar [default: '', note: 'Unidad de medida (g, kg, ud)']
+  receptaId long [null, note: 'Receta de origen (nullable)']
+  isComprat boolean [default: false, note: 'true=comprado, false=pendiente']
+  createdAt long [note: 'Fecha de creación (epoch ms)']
+  scheduledDate long [null, note: 'Fecha programada para compra (nullable)']
+
+  Note: 'Lista de la compra. Sincronizada con Firebase Firestore.'
+}
+
+// =============================================
+// RELACIONES
+// =============================================
+
+Ref: recepta_ingredient.receptaId > receptes.id [delete: cascade]
+Ref: recepta_ingredient.ingredientId > ingredients.id [delete: cascade]
+Ref: ingredients_compra.receptaId > receptes.id
